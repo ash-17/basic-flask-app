@@ -3,10 +3,14 @@ pipeline{
     
     stages{
         stage('Build'){
-            sh 'docker build -t flask:latest --name flaskapp .'
+            steps{
+                sh 'docker build -t flask:latest --name flaskapp .'
+            }
         }
         stage('Deploy'){
-            sh 'docker run -d -p 3000:3000 flaskapp'
+            steps{
+                sh 'docker run -d -p 3000:3000 flaskapp'
+            }
         }
     }
 }
