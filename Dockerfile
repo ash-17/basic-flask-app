@@ -1,5 +1,5 @@
 #Create a ubuntu base image with python 3 installed.
-FROM python:3
+FROM python:3.7-alpine
 
 #Set the working directory
 WORKDIR /usr/src/app
